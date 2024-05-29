@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="color_switcher.js"></script>
+    <title>JavaScript Background color switcher</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        nav{
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a{
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a[aria-current="page"]{
+            font-weight: bold;
+        }
+        .canvas{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1{
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        h2{
+            font-size: 1.2rem;
+            text-align: center;
+            margin-top: 20px;
+        }
+        span{
+            font-weight: bold;
+        }
+        .button{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        #grey{
+            background-color: grey;
+        }
+        #white{
+            background-color: white;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" aria-current="page">Home</a>
+        <a target="_blank" href="https://www.youtube.com/@chaiaurcode">Youtube Channel</a>
+    </nav>
+    <div class="canvas">
+        <h1>Color Scheme Switcher</h1>
+        <span class="button" id = 'grey'></span>
+        <span class="button" id = 'white'></span>
+        <span class="button" id = 'blue'></span>
+        <span class="button" id = 'yellow'></span>
+        <h2>Try clicking on one of the colors above <span>
+            to change the background color of the canvas
+        </span></h2>
+    </div>
+</body>
+</html>
