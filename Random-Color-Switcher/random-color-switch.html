@@ -24,13 +24,15 @@
         let intervalId;
         function startChangingColor(){
 
-            function changeColor () {
-                document.body.style.backgroundColor = randomColorGenerate();
-            }
-
             if (!intervalId){
                 intervalId = setInterval(changeColor, 1000);
             }
+            const changeColor = () => {
+                document.body.style.backgroundColor = randomColorGenerate();
+            }
+            // function changeColor () {
+            //     document.body.style.backgroundColor = randomColorGenerate();
+            // }
         };
         function stopChangingColor(){
             clearInterval(intervalId);
