@@ -27,12 +27,16 @@
             if (!intervalId){
                 intervalId = setInterval(changeColor, 1000);
             }
-            const changeColor = () => {
-                document.body.style.backgroundColor = randomColorGenerate();
-            }
-            // function changeColor () {
+            // const changeColor = () => {
             //     document.body.style.backgroundColor = randomColorGenerate();
             // }
+             /* this will throw an error because the function which is declared as a first class citizen is 
+            not hoisted, To fix this we can use the function declaration as a function expression as below 
+            , also if we want the arrow function, we can declare it above the place where we are using it.*/
+
+            function changeColor () {
+                document.body.style.backgroundColor = randomColorGenerate();
+            }
         };
         function stopChangingColor(){
             clearInterval(intervalId);
