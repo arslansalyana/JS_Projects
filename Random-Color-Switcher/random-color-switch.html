@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Switch</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Random Color Switch</h1>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+    </div>
+    <script>
+        //Randomly color switching function
+        function randomColorGenerate(){
+            let hexCode = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += hexCode[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        let intervalId;
+        function startChangingColor(){
+
+            function changeColor () {
+                document.body.style.backgroundColor = randomColorGenerate();
+            }
+
+            if (!intervalId){
+                intervalId = setInterval(changeColor, 1000);
+            }
+        };
+        function stopChangingColor(){
+            clearInterval(intervalId);
+            intervalId = null;
+        };
+
+        document.getElementById("start").addEventListener("click", startChangingColor); 
+        document.getElementById("stop").addEventListener("click", stopChangingColor); 
+    </script>
+</body>
+</html>
