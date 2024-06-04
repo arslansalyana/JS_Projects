@@ -136,7 +136,7 @@
         // Display the guess message
         const displayGuess = (guess) => {
             userInput.value = '';
-            guessSlot.innerHTML += `${guess} `;
+            guessSlot.innerHTML += `${guess}, `;
             remaining.innerHTML = `${10 - numGuess}`;
         };
 
