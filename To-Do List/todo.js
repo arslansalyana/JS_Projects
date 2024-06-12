@@ -1,6 +1,5 @@
 const inputBox = document.getElementById('input-box');
 const listContainer = document.getElementById('list-container');
-const btn = document.querySelector('button');
 
 function addTask () {
     if (inputBox.value === ''){
@@ -38,4 +37,4 @@ function showTask (){
     listContainer.innerHTML = localStorage.getItem('data'); 
 }
 
-showTask ();
+showTask();
